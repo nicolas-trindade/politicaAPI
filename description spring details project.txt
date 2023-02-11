@@ -1,0 +1,21 @@
+projetoPolitica
+Maven
+Java
+Spring Boot: 2.7.8
+Group: com.politica.projeto.repositorio
+Artifact: estudo
+Name: RepositorioEstudoAPIPolitica
+Description: repositorio de estudo e pratica de API
+Package name: com.politica.projeto.repositorio.estudo
+Packaging: jar
+Java: 8
+
+Dependencies: 
+
+Spring Boot DevTools
+Spring Data JPA
+H2 Database
+MySQL Driver
+Validation
+Spring Web
+Flyway Migration
