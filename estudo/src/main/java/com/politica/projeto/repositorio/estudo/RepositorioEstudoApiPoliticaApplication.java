@@ -12,6 +12,7 @@ public class RepositorioEstudoApiPoliticaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RepositorioEstudoApiPoliticaApplication.class, args);
+		LOGGER.info("Projeto iniciado com sucesso!");
 	}
 
 }
