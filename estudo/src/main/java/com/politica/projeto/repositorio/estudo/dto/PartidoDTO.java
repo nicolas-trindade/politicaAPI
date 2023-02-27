@@ -1,31 +1,16 @@
-package com.politica.projeto.repositorio.estudo.model.reference;
+package com.politica.projeto.repositorio.estudo.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+public class PartidoDTO {
 
-@Entity
-@Table(name = "tb_partido")
-public class Partido {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Integer numero;
     private String nome;
     private String sigla;
 
-    public Partido() {
+    public PartidoDTO() {
     }
 
-    public Partido(Long id) {
-        this.id = id;
-    }
-
-    public Partido(Long id, Integer numero, String nome, String sigla) {
+    public PartidoDTO(Long id, Integer numero, String nome, String sigla) {
         this.id = id;
         this.numero = numero;
         this.nome = nome;
@@ -62,5 +47,15 @@ public class Partido {
 
     public void setSigla(String sigla) {
         this.sigla = sigla;
+    }
+
+    @Override
+    public String toString() {
+        return "PartidoDTO{" +
+                "id=" + id +
+                ", numero=" + numero +
+                ", nome='" + nome + '\'' +
+                ", sigla='" + sigla + '\'' +
+                '}';
     }
 }

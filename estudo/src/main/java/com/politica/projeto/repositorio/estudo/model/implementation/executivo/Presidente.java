@@ -13,7 +13,8 @@ public class Presidente extends Executivo {
     public Presidente() {
     }
 
-    public Presidente(Long id, String nome, String cpf, String endereco, String telefone, String foto, Boolean mandato, Partido partido) {
+    public Presidente(Long id, String nome, String cpf, String endereco, String telefone,
+                      String foto, Boolean mandato, Partido partido) {
         super(id, nome, cpf, endereco, telefone, foto, mandato, partido);
     }
 }

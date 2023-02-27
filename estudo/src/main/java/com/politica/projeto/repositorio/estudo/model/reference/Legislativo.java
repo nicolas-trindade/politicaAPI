@@ -12,7 +12,8 @@ public class Legislativo extends Politico{
     public Legislativo() {
     }
 
-    public Legislativo(Long id, String nome, String cpf, String endereco, String telefone, String foto, Boolean mandato, Partido partido, Boolean lider) {
+    public Legislativo(Long id, String nome, String cpf, String endereco, String telefone,
+                       String foto, Boolean mandato, Partido partido, Boolean lider) {
         super(id, nome, cpf, endereco, telefone, foto, mandato, partido);
         this.lider = lider;
     }
