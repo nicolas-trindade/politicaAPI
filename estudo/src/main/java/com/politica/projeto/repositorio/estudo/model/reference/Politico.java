@@ -1,6 +1,7 @@
 package com.politica.projeto.repositorio.estudo.model.reference;
 
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,18 +18,18 @@ public abstract class Politico {
     protected Long id;
     @Column(name="nome",nullable=false)
     protected String nome;
-    @Column(name="cpf",nullable=false)
+    @Column(name="cpf",nullable=true, length = 11)
     protected String cpf;
-    @Column(name="endereco",nullable=false)
+    @Column(name="endereco",nullable=true)
     protected String endereco;
-    @Column(name="telefone",nullable=false)
+    @Column(name="telefone",nullable=true)
     protected String telefone;
-    @Column(name="foto",nullable=false)
+    @Column(name="foto",nullable = true)
     protected String foto;
-    @Column(name="mandato",nullable=false)
+    @Column(name="mandato",nullable=false, columnDefinition = "boolean default false")
     protected Boolean mandato;
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "id_partido")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_partido", referencedColumnName = "id", nullable = false)
     protected Partido partido;
 
     public Politico() {

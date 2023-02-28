@@ -1,5 +1,6 @@
 package com.politica.projeto.repositorio.estudo.model.reference;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,11 +12,15 @@ import javax.persistence.Table;
 public class Partido {
 
     @Id
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 3, nullable = false)
     private Integer numero;
+    @Column(length = 128, nullable = false)
     private String nome;
+    @Column(length = 32, nullable = false)
     private String sigla;
 
     public Partido() {
