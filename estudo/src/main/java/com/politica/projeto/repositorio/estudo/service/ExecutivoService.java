@@ -1,6 +1,7 @@
 package com.politica.projeto.repositorio.estudo.service;
 
 import com.politica.projeto.repositorio.estudo.model.reference.Executivo;
+import com.politica.projeto.repositorio.estudo.model.reference.Politico;
 import com.politica.projeto.repositorio.estudo.repository.reference.ExecutivoRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,12 @@ public class ExecutivoService {
     //TODO quando arrumar o repository generico, da pra usar aqui o service.
     //TODO procurar saber como declarar uma entidade genérica
     /*public List<Executivo> buscarTodos(Example<?> example){
-        executivoRepository.findAll();
+        executivoRepository.findAllExecutivo();
     }*/
+
+    public List<? extends Executivo> buscarTodosExecutivosPorCargo(Executivo executivo) {
+        List<?> listaExecutivo = executivoRepository.findAll();
+//        executivoRepository.findAllExecutivo(executivo);
+        return (List<? extends Executivo>) listaExecutivo;
+    }
 }
